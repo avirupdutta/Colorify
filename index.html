@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .display-color{
+            margin: 3rem auto;
+            width: 450px;
+            height: 300px;
+            border: 1px solid #c0c0c0;
+        }
+        button{
+            width: 250px;
+            height: 50px;
+            font-size: 17px;
+            background: rgb(125, 94, 197);
+            color: white;
+            border-radius: 100px;
+            border: 1px solid silver;
+            transition: all .1s linear;
+        }
+        button:hover{ 
+            background: rgb(86, 66, 134);
+            cursor: pointer;    
+        }
+        button:focus{ outline: none; }
+    </style>
+</head>
+<body>
+    <h1>A Simple and Random CSS color generator</h1>
+    <div class="display-color"></div>
+    <p>Hex Value: <strong id="colorHexValue"></strong></p>
+    <button id="generateNewColor">Get New Random Color</button>
+
+    <script>
+        function setNewColor(){
+            var colorVal = '#' + Math.random().toString().slice(2, 8);
+            document.querySelector(".display-color").style.background = colorVal;
+            document.querySelector("#colorHexValue").innerText = colorVal;
+        }
+        setNewColor();
+        document.querySelector("#generateNewColor").addEventListener('click', setNewColor);
+
+    </script>
+</body>
+</html>
