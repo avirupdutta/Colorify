@@ -12,22 +12,23 @@
         }
         .display-color{
             margin: 3rem auto;
-            width: 450px;
-            height: 300px;
+            width: 650px;
+            height: 350px;
             border: 1px solid #c0c0c0;
+            border-radius: 8px;
         }
         button{
             width: 250px;
             height: 50px;
             font-size: 17px;
-            background: rgb(125, 94, 197);
+            background: rgb(26, 194, 96);
             color: white;
             border-radius: 100px;
             border: 1px solid silver;
             transition: all .1s linear;
         }
         button:hover{ 
-            background: rgb(86, 66, 134);
+            background: rgb(24, 153, 78);
             cursor: pointer;    
         }
         button:focus{ outline: none; }
@@ -36,7 +37,7 @@
 <body>
     <h1>A Simple and Random CSS color generator</h1>
     <div class="display-color"></div>
-    <p>Hex Value: <strong id="colorHexValue"></strong></p>
+    <h1 id="colorHexValue"></h1>
     <button id="generateNewColor">Get New Random Color</button>
 
     <script>
@@ -44,6 +45,7 @@
             var colorVal = '#' + Math.random().toString().slice(2, 8);
             document.querySelector(".display-color").style.background = colorVal;
             document.querySelector("#colorHexValue").innerText = colorVal;
+            document.querySelector("#colorHexValue").style.color = colorVal;
         }
         setNewColor();
         document.querySelector("#generateNewColor").addEventListener('click', setNewColor);
