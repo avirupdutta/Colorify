@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .logo{
+            max-width: 50px;
+        }
+        .display-color{
+            margin: 2rem auto;
+            width: 450px;
+            height: 225px;
+            border-radius: 8px;
+        }
+        .title{
+            font-size: 50px;
+            font-weight: 300;
+            margin: 0;
+        }
+        .lead{ color: #333333ca; }
+        button{
+            width: 250px;
+            height: 50px;
+            font-size: 17px;
+            background: rgb(26, 194, 96);
+            color: white;
+            border-radius: 100px;
+            border: 1px solid silver;
+            transition: all .1s linear;
+        }
+        button:hover{ 
+            background: rgb(24, 153, 78);
+            cursor: pointer;    
+        }
+        button:focus{ outline: none; }
+    </style>
+</head>
+<body>
+    <img src="./icon_128.png" alt="logo" class="logo">
+    <h1 class="title">Colorify</h1>
+    <p class="lead">A Simple and Random CSS Color Generator</p>
+    <div class="display-color"></div>
+    <h1 id="colorHexValue"></h1>
+    <button id="generateNewColor">Get New Random Color</button>
+
+    <script src="./popup.js"></script>
+</body>
+</html>
